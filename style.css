@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least the full viewport height */
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+    color: white;
+    padding: 15px 0;
+    position: fixed; /* Fixed navbar */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4a261; /* Accent color for logo */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar .nav-links a:hover {
+    background: rgba(244, 162, 97, 0.8); /* Semi-transparent hover background */
+    color: #333; /* Darker text on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Hero Section with Blurry Background */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover; /* Add your image here */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px); /* Blurry effect */
+    z-index: 0; /* Place it behind the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurry background */
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.hero-content h2 {
+    font-size: 48px; /* Larger font size */
+    margin-bottom: 15px;
+    font-weight: 700; /* Bold font weight */
+}
+
+.hero-content p {
+    font-size: 24px; /* Larger font size */
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    background: #f4a261;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px; /* More rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+    display: inline-block;
+}
+
+.hero-content .btn:hover {
+    background: #e76f51;
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}

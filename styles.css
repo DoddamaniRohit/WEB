@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.navbar .nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.hero-content .btn {
+    background: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.hero-content .btn:hover {
+    background: #e76f51;
+}
+
+/* Dashboard Styling */
+.dashboard {
+    padding: 50px;
+    text-align: center;
+}
+.dashboard h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.dashboard .btn {
+    display: inline-block;
+    background: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin: 10px;
+}
+.dashboard .btn:hover {
+    background: #e76f51;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+}

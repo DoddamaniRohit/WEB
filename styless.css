@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #007bff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 28px; /* Larger font size */
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px; /* Rounded line */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #495057;
+}
+
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    background-color: #fff;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff); /* Gradient on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Optional - styling for checkbox and radio groups */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input,
+.radio-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Helper text styles */
+.helper-text {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+/* Required field indicator */
+.required:after {
+    content: '*';
+    color: #dc3545;
+    margin-left: 3px;
+}
+
+/* Form section divider */
+.form-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 25px 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 25px 20px;
+    }
+    
+    form input, 
+    form select, 
+    form textarea {
+        padding: 10px;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+/* Additional Enhancements */
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 10%, transparent 10.01%);
+    background-size: 20px 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.container:hover::before {
+    opacity: 1;
+}
